@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jessica's Choice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+    }
+    .button {
+      display: inline-block;
+      margin: 10px 0;
+      padding: 10px 20px;
+      background-color: #007BFF;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      text-align: center;
+    }
+    .button:hover {
+      background-color: #0056b3;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="page-1" class="page">
+      <p>Your name is Jessica, you are 16 years old and a 10th grader at Melvuin's High School. You've always wanted to be among the most popular girls at school, and your plans are underway, but your mom has other plans.</p>
+      <a href="#" class="button" onclick="showPage(2)">Continue</a>
+    </div>
+
+    <div id="page-2" class="page hidden">
+      <p>Your dad has traveled for a business trip, and your mom needs to get your two younger brothers to the dentist. She leaves the home in your care. But today, your new friends are inviting you to an epic birthday party. What do you do? Help your mom tidy the house, or hang out with your new friends?</p>
+      <a href="#" class="button" onclick="showPage(3)">Continue</a>
+    </div>
+
+    <div id="page-3" class="page hidden">
+      <p>"Jessica," your mom calls.
+      <br>"Yes, mom," you reply.
+      <br>"As you already know, I will be taking your brothers to see the dentist, and I need you to stay home, keep the house tidy, and do your chores. Remember, you are turning 17 next week, and I might as well get you that gift you've always wanted," your mom says.
+      <br>Are you up to the task?</p>
+      <a href="#" class="button" onclick="showPage(4)">Continue</a>
+    </div>
+
+    <div id="page-4" class="page hidden">
+      <p>Your mom and brothers leave, and you get to work. A few minutes later, you get a call from your bestie, Ella.
+      <br>"Hello, what's up, babe? Hope you're free today?" she asks.
+      <br>You reply, "I got a lot of work to do. My mom took my brothers to the dentist and needs me to stay home and keep the house tidy."
+      <br>"It's a shame," she replies.
+      <br>You question her statement, and she replies that the coolest girl in school, Isabel, invites you to her birthday party, which kicks off in the next hour.
+      <br>"This is Jessica's last chance to show she has what it takes to hang out with the coolest chicks at school," Ella quotes Isabel.</p>
+      <a href="#" class="button" onclick="showPage(5)">Continue</a>
+    </div>
+
+    <div id="page-5" class="page hidden">
+      <p>"You have less than an hour to make your choice," Ella says. "You in or you out?"
+      <br>You're torn between helping your mom or satisfying your friends.</p>
+      <a href="#" class="button" onclick="showPage(6)">Stay home and help your mom</a>
+      <a href="#" class="button" onclick="showPage(7)">Put on your most beautiful dress and step out to have some fun</a>
+    </div>
+
+    <div id="page-6" class="page hidden">
+      <p>It takes two hours until your mom returns home and surprises you with a pre-birthday gift.</p>
+      <a href="#" class="button" onclick="showPage(8)">Continue</a>
+    </div>
+
+    <div id="page-7" class="page hidden">
+      <p>You choose to go to the party, but upon arriving, you realize it wasn’t as epic as you thought. You feel guilty for not helping your mom and worry about the consequences.</p>
+      <a href="#" class="button" onclick="showPage(9)">Continue</a>
+    </div>
+
+    <div id="page-8" class="page hidden">
+      <p>Your mom pulls out a pair of virtual reality glasses from her bag. Your mouth opens in shock as you stare at the shiny device you've always wanted.
+      <br>"It's the least I could do after all your hard work and obedience," your mom says as she pulls you in for a hug.
+      <br>A week later, you have the most epic birthday party, impressing all your friends. Isabel and the whole school dub you the coolest girl in school.</p>
+      <p><strong>THE END</strong></p>
+      <a href="#" class="button" onclick="showPage(1)">Restart the Game</a>
+    </div>
+
+    <div id="page-9" class="page hidden">
+      <p>Your mom returns home to a messy house and looks disappointed. She tells you how important it was to her that you helped, and you feel regretful. Maybe next time, you'll make a different choice.</p>
+      <p><strong>THE END</strong></p>
+      <a href="#" class="button" onclick="showPage(1)">Restart the Game</a>
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageNumber) {
+      const pages = document.querySelectorAll('.page');
+      pages.forEach(page => page.classList.add('hidden'));
+      document.getElementById(`page-${pageNumber}`).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
